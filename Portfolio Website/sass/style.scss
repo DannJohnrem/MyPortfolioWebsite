@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+$theme: ("teal": "#009688",
+    red: "#f44336",
+    "yellow": "#ffeb3b",
+    "grey": "#9e9e9e",
+    "white": "#ffffff",
+    "blue": "#03a9f4 ",
+    "green": "#33691e",
+    "orange": "#ff9800"
+);
+
+
+$fontfamily: 'Source Sans Pro',
+sans-serif;
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: $fontfamily;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+div {
+    display: block;
+}
+
+section {
+    position: relative;
+}
+
+[element~="nav"] {
+    position: absolute;
+    left: 45%;
+    padding: 30px 40px;
+}
+
+#overlay {
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(44, 44, 44, 0.5);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+}
+
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption1 {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+
+    h1,
+    h2 {
+        font-weight: 200;
+        margin: 2rem;
+        line-height: 2rem;
+    }
+
+    h1 {
+        color: rgb(255, 255, 255);
+        bottom: 100%;
+        top: 400px;
+        margin: 40px;
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .txt-type>.txt {
+        border-right: 0.2rem solid #777;
+    }
+
+    @media(min-width: 1200px) {
+        h1 {
+            font-size: 5rem;
+        }
+    }
+
+    @media(max-width: 800px) {
+        .caption1 {
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+
+    @media(max-width: 500px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
+// buttons styles section
+
+.caption span.border {
+    background-color: rgb(163, 24, 24);
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    border: none;
+    border-radius: 30px 30px;
+    transition: 1s;
+}
+
+.caption1 span.border {
+    background-color: rgb(163, 24, 24);
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    border: none;
+    border-radius: 30px 30px;
+    transition: 1s;
+
+}
+
+.caption span.border:hover {
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    transform: scale(1.3);
+}
+
+.caption1 span.border:hover {
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    transform: scale(1.3);
+}
+
+[class~='text'] {
+    background-color: transparent;
+    font-size: 25px;
+    color: #f7f7f7;
+    padding: 18px;
+    letter-spacing: 10px;
+}
+
+// .demo {
+//     color: #777;
+//     background-color: white;
+//     text-align: center;
+//     padding: 50px 80px;
+//     // text-align: justify;
+// }
+
+// .demo h3 {
+//     text-align: center;
+// }
+
+.parallax1,
+.parallax2,
+.parallax3 {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    opacity: 0.65;
+}
+
+.parallax1 {
+    background-image: url('/img/parallax2.jpg');
+    min-height: 700px;
+    background-blend-mode: overlay;
+}
+
+.parallax2 {
+    background-image: url('/img/parallax3.jpg');
+    min-height: 400px;
+}
+
+.parallax3 {
+    background-image: url('/img/parallax1.jpg');
+    min-height: 400px;
+}
+
+// footer section
+.page-footer {
+    position: relative;
+
+    &[class$='column1'] {
+        position: absolute;
+        text-align: left;
+    }
+}
+
+// preloader
+.preloader-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+// go to top
+
+.gotop {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #D46856;
+    color: #FFF;
+    cursor: pointer;
+    z-index: 51;
+    width: 0;
+    border-radius: 50% 0 0 50%;
+    transition: all .3s ease;
+}

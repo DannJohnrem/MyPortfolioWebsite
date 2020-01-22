@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+$fontfamily: 'Source Sans Pro',
+sans-serif;
+
+* {
+    /* Layout Declarations */
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $fontfamily;
+}
+
+div {
+    display: block;
+}
+
+[class~="brand"] {
+    position: absolute;
+    left: 450%;
+    padding: 30px 40px;
+}
+
+.parallax1 {
+    background-image: url('/img/pr1.jpg');
+    min-height: 700px;
+    background-blend-mode: overlay;
+}
+
+.parallax2 {
+    background-image: url('/img/pr2.jpg');
+    min-height: 700px;
+    background-blend-mode: overlay;
+}
+
+
+.parallax1,
+.parallax2 {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    opacity: 0.65;
+}
+
+.caption1 {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 5rem;
+}
+
+h1 {
+    font-weight: 200;
+    margin: 2rem;
+    line-height: 2rem;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    bottom: 100%;
+    top: 400px;
+    margin: 40px;
+    font-size: 4rem;
+}
+
+.txt-type>.txt {
+    border-right: 0.2rem solid #777;
+}
+
+@media(min-width: 1200px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+@media(max-width: 800px) {
+    .caption1 {
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 500px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.caption1 span.border {
+    background-color: rgb(163, 24, 24);
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    border: none;
+    border-radius: 30px 30px;
+    transition: 1s;
+
+}
+
+.caption1 span.border:hover {
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    transform: scale(1.3);
+}
+
+/* about me */
+
+
+.new {
+    /* Typography Declrations */
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFCF33;
+}
+
+.new:hover {
+    /* Tyopography Declarations */
+    color: #FFE799;
+}
+
+.new:visited {
+    /* Typography Declarations */
+    color: #D1A000;
+}
+
+.heading {
+    /* Layout Declarations */
+    max-width: 9em;
+    margin-top: 2em;
+}
+
+.question {
+    /* Layout Declarations */
+    margin: 2em 0 1em 0;
+    /* Typography Declarations */
+    color: #FFCF33;
+    font-family: "Gentium Book Basic", Georgia, serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.answer {
+    /* Layout Declarations */
+    margin-left: 0em;
+}
+
+.introduction,
+.location,
+.questions {
+    /* Layout Declarations */
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.introduction,
+.location,
+.questions {
+    /* Layout Declarations */
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introduction,
+.location,
+.content-footer {
+    /* Typography Declarations */
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+/* skill progress bar */
+.box {
+    width: 100%;
+    height: 100%;
+    margin: 50px auto;
+    background: #f3f3f3;
+    box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.lang {
+    margin: 5px;
+    font-size: 20px;
+
+}
+
+.bar {
+    width: 100%;
+    background: #dfdfdf;
+    overflow: hidden;
+    padding: 5px;
+
+}
+
+.progress {
+    float: left;
+    padding: 15px;
+}
+
+.percent {
+    float: right;
+    font-weight: 400;
+    height: 30px;
+    line-height: 30px;
+}
+
+/* logo */
+[class*="logo"] {
+    position: absolute;
+    left: 0;
+    padding: 30px 40px;
+}
+
+/* my picture */
+.conta {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    position: relative;
+    display: block;
+    left: 75%;
+    width: 50%;
+    height: auto;
+    border-radius: 500px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 75%;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(212, 39, 39);
+    border-radius: 500px;
+}
+
+.conta:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.txt {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+/* preloader */
+
+.preloader-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+// go to top
+
+.gotop {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #D46856;
+    color: #FFF;
+    cursor: pointer;
+    z-index: 51;
+    width: 0;
+    border-radius: 50% 0 0 50%;
+    transition: all .3s ease;
+}

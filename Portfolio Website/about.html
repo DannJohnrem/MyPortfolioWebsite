@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!--Import materialize.css-->
+   <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+   <!-- link sass file -->
+   <link rel="stylesheet" href="/css/main.css">
+   <!--Let browser know website is optimized for mobile-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- font awesome CDN -->
+   <script src="https://kit.fontawesome.com/f09bca736f.js" crossorigin="anonymous"></script>
+   <!-- jquery CDN -->
+   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+     crossorigin="anonymous"></script>
+    <!-- vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+   <title>My Website</title>
+   <!-- Icon on the top of the title bar -->
+   <link rel="shortcut icon" type="image/png" href="/img/favicon-16x16.png">
+</head>
+
+<body>
+  <!-- navbar section -->
+  <nav class="red lighten-1 navbar-fixed">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">Dann</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About me</a></li>
+          <li><a href="project.html">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidenav Setup -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="project.html">Projects</a></li>
+  </ul>
+
+  <!-- Go to Top Button -->
+  <div onclick="topFuction()" class='gotop' id="top">
+    <i class='fa fa-chevron-up'></i>
+  </div>
+  <!-- Section: Content -->
+  <div class="parallax2">
+    <div class="caption1">
+      <h2>ABOUT ME</h2>
+      <a href="#section2"><span class="border">Learn more</span></a>
+    </div>
+  </div>
+
+  <!-- my pic -->
+  <div class="conta" id="section2">
+    <img src="/img/myImg.jpg" alt="Avatar" class="image responsive-img"">
+  <div class=" overlay">
+    <div class="text">This is Me</div>
+  </div>
+  </div>
+  <section class="introduction">
+    <h3 class="heading">Introduction</h3>
+    <p>I love the web and all the awesome things that come out of it. I&rsquo;m excited to live and work in a time of
+      huge advances in web technology. It&rsquo;s easier than ever to share and collaborate with others, all because of
+      the Internet.</p>
+    <p>And I also love to learn new things, I'm hungry for learning and I want to challenge myself because I want to
+      prove myself that im worth it.</p>
+  </section>
+  <!-- <section class="location">
+    <h3 class="heading">Where I&rsquo;m From</h3>
+    <p>I&rsquo;m from the Midwest - Ohio, specifically - Cleveland, even more specifically. I love the spacious fields,
+      the smell of the outdoors, and the people in Ohio. I bring a bit of the Midwest work ethic to all my projects - a
+      craftsman&rsquo;s approach to <strong>Doing Things Right the First Time</strong>.</p>
+    <p>I&rsquo;m finishing my design degree at Kent State University, and will be graduating this winter with a focus in
+      <strong>interaction design</strong>.</p>
+  </section> -->
+  <section class="questions">
+    <h3 class="heading">More About Me</h1>
+      <dl class="question-list">
+        <dt class="question">What are your favorite hobbies?</dt>
+        <dd class="answer">I&rsquo;m a huge gamer. I also <strong>LOVE</strong> food. I love playing Basketball</dd>
+        <dt class="question">What&rsquo;s your dream job?</dt>
+        <dd class="answer">I&rsquo;d love to work on google as a Programmer, and also how to open a Huge company in the
+          future</dd>
+        <dt class="question">What&rsquo;s your background?</dt>
+        <dd class="answer">I&rsquo;ve been programming since I was graduate in College. I decided to go to TESDA for Web
+          design
+          because I love front-end and felt like I needed more help with the design side than the programming side. and
+          also want to be a Back-end programmer.</dd>
+      </dl>
+  </section>
+
+  <!-- skill progress -->
+
+  <div class="box">
+    <h2>{{title}}</h2>
+    <ul class="skills">
+      <li v-for="skill in skills">
+        <div class="lang">{{skill.lang}}</div>
+        <div class="bar">
+          <div class="progress" v-bind:style="{'background':skill.color, 'width':skill.percent+'%'}"></div>
+          <span class="percent">{{skill.percent}}%</span>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+  <!-- vue js script -->
+  <script>
+    let one = new Vue({
+      el: ".box",
+      data: {
+        title: "My skills",
+        skills: [{
+            lang: "HTML5",
+            percent: 70,
+            color: "#ec407a"
+          },
+          {
+            lang: "CSS3",
+            percent: 60,
+            color: "#f4511e"
+          },
+          {
+            lang: "JAVASCRIPT",
+            percent: 50,
+            color: "#512da8"
+          },
+          {
+            lang: "MATERIALIZE",
+            percent: 75,
+            color: "#f57c00"
+          },
+          {
+            lang: "VUE",
+            percent: 40,
+            color: "#0288d1"
+          },
+          {
+            lang: "BOOTSTRAP",
+            percent: 50,
+            color: "#388e3c"
+          },
+          {
+            lang: "SASS",
+            percent: 50,
+            color: "teal"
+          }
+        ]
+      }
+    })
+    // let two = new Vue ({
+    //   el: "#vue-app-one",
+    //     data: {
+    //       me:{
+    //       name: "Dann Johnrem A De Guzman",
+    //       address: "Blk-5 Lot-1 Che-1 Bagumbyan Teresa Rizal",
+    //       Birthday: "September 10, 1998",
+    //       Email: "jonrhem10@gmail.com",
+    //       Contact: "09157486176"
+
+    //     }
+
+    //   }
+    // });
+  </script>
+  <div class="preloader-background">
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Section: Footer -->
+  <footer class="page-footer red lighten-1">
+
+    <div class="row">
+      <div class="col m4 s12">
+        <h5 class="white-text">ABOUT</h5>
+        <p class="grey-text text-lighten-4">This is a
+          blog about web development from the makers of the popular
+          web design blog I love to focus on the latest trends, tutorials, opinion articles as
+          well as tips and tricks to empower my skills to become
+          better web developer.</p>
+      </div>
+
+
+      <div class="col m4 s12">
+        <h5 class="white-text">NAVIGATION</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+          <li><a class="grey-text text-lighten-3" href="about.html">About</a></li>
+          <li><a class="grey-text text-lighten-3" href="project.html">Projects</a></li>
+        </ul>
+      </div>
+      <div class="col m4 s12 red lighten-1">
+        <h5 class="white-text">FOLLOW ME:</h5>
+        <p class="white-text">Subscribe to my Youtube channel or
+          follow me on Facebook, Intagram and Twitter for the latest content.</p>
+        <a class="waves-effect btn circle red" href="https://www.facebook.com/rhrm.deguzman.quirong?ref=bookmarks"
+          target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a class="waves-effect btn circle red"
+          href="https://www.youtube.com/channel/UCGuNwKbOl-NBaApHOi0zaPA?view_as=subscriber" target="_blank">
+          <i class="fab fa-youtube-square"></i>
+        </a>
+        <a class="waves-effect btn circle red" href="https://github.com/DannJohnrem" target="_blank">
+          <i class="fab fa-github-square"></i>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 ALL RIGHTS RESERVED
+      </div>
+    </div>
+  </footer>
+
+
+   <!--JavaScript at end of body for optimized loading-->
+   <script type="text/javascript" src="/js/materialize.min.js"></script>
+   <!-- link to javascript file -->
+   <script src="/js/main.js"></script>
+   <!-- Jquery CDN
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script>
+     $(document).ready(() => {
+       $('.sidenav').sidenav();
+     });
+   </script>
+
+
+</body>
+
+</html>

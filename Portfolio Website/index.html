@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- link sass file -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- font awesome CDN -->
+  <script src="https://kit.fontawesome.com/f09bca736f.js" crossorigin="anonymous"></script>
+  <!-- jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <title>My Website</title>
+  <!-- Icon on the top of the title bar -->
+  <link rel="shortcut icon" type="image/png" href="/img/favicon-16x16.png">
+
+</head>
+
+<body>
+  <!-- navbar section -->
+  <nav class="red lighten-1 navbar-fixed">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo">Dann</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About me</a></li>
+          <li><a href="project.html">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidenav Setup -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Me</a></li>
+    <li><a href="project.html">Projects</a></li>
+  </ul>
+
+
+  <!-- Go to Top Button -->
+  <div onclick="topFuction()" class='gotop' id="top">
+    <i class='fa fa-chevron-up'></i>
+  </div>
+  <!-- Section: Content -->
+  <section>
+    <div class="parallax1" id="overlay">
+
+      <div class="caption1">
+        <h1>Hi! I'm Dann, I love to
+          <span class="txt-type" data-wait="3000" data-words='["Learn.", "Create.", "Code."]'></span>
+        </h1>
+        <h2>Welcome to my Website</h2>
+        <a href="#section2"><span class="border">Learn more</span></a>
+      </div>
+    </div>
+  </section>
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="icon-block">
+        <h2 class="center brown-text">
+          <i class="fas fa-code teal-text"></i>
+        </h2>
+        <h4 class="center grey-text">Web development</h4>
+
+        <p class="light grey-text">I think this is my passion, because I really enjoy writing codes.</p>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="icon-block">
+        <h2 class="center brown-text">
+          <i class="fas fa-layer-group teal-text"></i>
+        </h2>
+        <h4 class="center grey-text">Creat Things</h4>
+
+        <p class="light grey-text">I enjoy every little things in creating websites, I created websites using UI
+          frameworks, and I love to practice web development and learn from it.</p>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="icon-block">
+        <h2 class="center brown-text">
+          <i class="material-icons teal-text medium">settings</i>
+        </h2>
+        <h4 class="center grey-text">Hard Worker</h4>
+
+        <p class="light grey-text">Im a hard worker in a way that I need to accoplish certain task, and I'm willing to
+          spend time and effort for that task.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="parallax2">
+    <div class="caption">
+      <a href="about.html"><span class="border">About me</span></a>
+    </div>
+  </div>
+  <div style="position:relative;">
+    <div
+      style="color:#777;background-color:#fff;text-align:center;padding:50px 80px;text-align: justify;font-size: 25px;">
+      <p>Willing to learn more, Enjoy everything, A happy person, a Good person, and also a helping person</p>
+    </div>
+  </div>
+  <div class="parallax3">
+    <div class="caption">
+      <a href="project.html" id="section2"><span class="border text">Project</span></a>
+    </div>
+  </div>
+  <div style="position:relative;">
+    <div
+      style="color:#777;background-color:#fff;text-align:center;padding:50px 80px;text-align: justify;font-size: 25px;">
+      <p>This is my all Projects, I practice developing websites.</p>
+    </div>
+  </div>
+  <!-- preloader -->
+  <div class="preloader-background">
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Section: Footer -->
+  <footer class="page-footer red lighten-1">
+
+    <div class="row">
+      <div class="col m4 s12">
+        <h5 class="white-text">ABOUT</h5>
+        <p class="grey-text text-lighten-4">This is a
+          blog about web development from the makers of the popular
+          web design blog I love to focus on the latest trends, tutorials, opinion articles as
+          well as tips and tricks to empower my skills to become
+          better web developer.</p>
+      </div>
+
+
+      <div class="col m4 s12">
+        <h5 class="white-text">NAVIGATION</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+          <li><a class="grey-text text-lighten-3" href="about.html">About me</a></li>
+          <li><a class="grey-text text-lighten-3" href="project.html">Project</a></li>
+        </ul>
+      </div>
+      <div class="col m4 s12 red lighten-1">
+        <h5 class="white-text">FOLLOW ME:</h5>
+        <p class="white-text">Subscribe to my Youtube channel or
+          follow me on Facebook, Intagram and Twitter for the latest content.</p>
+        <a class="waves-effect btn circle red" href="https://www.facebook.com/rhrm.deguzman.quirong?ref=bookmarks"
+          target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a class="waves-effect btn circle red"
+          href="https://www.youtube.com/channel/UCGuNwKbOl-NBaApHOi0zaPA?view_as=subscriber" target="_blank">
+          <i class="fab fa-youtube-square"></i>
+        </a>
+        <a class="waves-effect btn circle red" href="https://github.com/DannJohnrem" target="_blank">
+          <i class="fab fa-github-square"></i>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 ALL RIGHTS RESERVED
+      </div>
+    </div>
+  </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="/js/materialize.min.js"></script>
+  <!-- link to javascript file -->
+  <script src="/js/main.js"></script>
+  <!-- Jquery CDN
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      $('.sidenav').sidenav();
+    });
+  </script>
+
+</body>
+
+</html>
